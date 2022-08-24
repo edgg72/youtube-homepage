@@ -3,6 +3,7 @@ import  axios from  'axios';
 import SearchInput from '../components/SearchInput/SearchInput';
 import TagBar from '../components/TagBar/TagBar';
 import VideoListContainer from './VideoListContainer';
+import './MainContainer.css'
 
 function MainContainer() {
   const [videoList, setVideoList] = useState();
@@ -39,11 +40,11 @@ function MainContainer() {
   },[])
 
   return (
-    <>
+    <main className='mainContainer' >
       <SearchInput searchHandler={fetchVideos} query={query} setQuery={setQuery} keyDownHandler={keyDownHandler}/>
       <TagBar />
       <VideoListContainer videoList={videoList} />
-    </>
+    </main>
   )
 }
 
