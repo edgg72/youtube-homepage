@@ -4,7 +4,7 @@ function SearchInput() {
   return (
     <>
       <input placeholder='Search' />
-      <button />
+      <button>icon here</button>
     </>
   )
 }
