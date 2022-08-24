@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import VideoCard from '../components/VideoCard/VideoCard';
 
-function VideoListContainer() {
+function VideoListContainer({videoList}) {
   return (
-    <div>VideoListContainer</div>
+    <div>
+      {videoList &&  videoList.map((el, i) => {
+        return(
+          <div key={i}>
+            <VideoCard videoData={el}/>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 

@@ -1,10 +1,11 @@
 import React from 'react'
 
-function VideoCard() {
+function VideoCard({videoData}) {
   return (
     <>
-      <h3 role="VideoTitle"></h3>
-      <p role="ChannelName"></p>
+      <img src={videoData.snippet.thumbnails.default.url} alt="thumbnail" />
+      <h3 role="VideoTitle">{videoData.snippet.title.replace(/(&quot;)/g,"\"").replace('&amp;','&')}</h3>
+      <p role="ChannelName">{videoData.snippet.channelTitle}</p>
     </>
   )
 }
