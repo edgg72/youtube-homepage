@@ -1,3 +1,10 @@
 @use './MainContainer';
 @use './SearchInput';
-@use './VideoCard'
+@use './VideoCard';
+@use './Spinner';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}

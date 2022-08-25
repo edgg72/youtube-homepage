@@ -47,7 +47,12 @@ function MainContainer() {
   return (
     <main className='main' >
 
-      <SearchInput searchHandler={fetchVideos} query={query} setQuery={setQuery} keyDownHandler={keyDownHandler} />
+      <SearchInput
+        searchHandler={fetchVideos}
+        query={query}
+        setQuery={setQuery}
+        keyDownHandler={keyDownHandler}
+      />
       <TagBar />
       {isLoading ? <Spinner /> : <VideoListContainer videoList={videoList} />}
     </main>

@@ -1,4 +1,18 @@
 .search-section {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 2.5rem;
+  border-bottom: 1px solid lightgray; //use variables later
+}
+
+.search-section__input {
+  min-height: 20px;
+  height: 80%;
+  border: 0.1px solid gray; //use variables later
+}
+
+.search-section__button {
+  height: 80%;
 }
