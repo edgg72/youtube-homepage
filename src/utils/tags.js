@@ -1,1 +1,1 @@
-export const tags = ["Música", "Álbumes", "Videojuegos", "Pódcast", "Aplicación informática", "Programación", "Comedias", "Debates", "Javascript",]
+export const tags = ["Música", "Álbumes", "Videojuegos", "Pódcast", "Informática", "Programación", "Comedias", "Debates", "Javascript",]
