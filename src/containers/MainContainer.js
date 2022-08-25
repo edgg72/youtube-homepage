@@ -1,16 +1,19 @@
-import React,{ useState, useEffect } from 'react';
-import  axios from  'axios';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import SearchInput from '../components/SearchInput/SearchInput';
 import TagBar from '../components/TagBar/TagBar';
 import VideoListContainer from './VideoListContainer';
-import './MainContainer.css'
+import '../css/styles.css'
+import Spinner from '../components/Spinner/Spinner';
 
 function MainContainer() {
   const [videoList, setVideoList] = useState();
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   async function fetchVideos(searchInput) {
-    if(searchInput){
+    setIsLoading(true);
+    if (searchInput) {
       const res = await axios.get('http://localhost:5000/', {
         params: {
           q: searchInput
@@ -24,8 +27,10 @@ function MainContainer() {
           regionCode: "CO"
         }
       })
+      console.log(res)
       setVideoList(res.data.items)
     }
+    setIsLoading(false);
   }
 
   const keyDownHandler = event => {
@@ -35,15 +40,16 @@ function MainContainer() {
     }
   };
 
-  useEffect(() =>{
+  useEffect(() => {
     fetchVideos()
-  },[])
+  }, [])
 
   return (
-    <main className='mainContainer' >
-      <SearchInput searchHandler={fetchVideos} query={query} setQuery={setQuery} keyDownHandler={keyDownHandler}/>
+    <main className='main' >
+
+      <SearchInput searchHandler={fetchVideos} query={query} setQuery={setQuery} keyDownHandler={keyDownHandler} />
       <TagBar />
-      <VideoListContainer videoList={videoList} />
+      {isLoading ? <Spinner /> : <VideoListContainer videoList={videoList} />}
     </main>
   )
 }

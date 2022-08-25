@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+}
+
+.video-link {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=styles.css.map */
