@@ -7,7 +7,7 @@ import { FiBell } from "react-icons/fi";
 function SearchInput({ searchHandler, query, setQuery, keyDownHandler }) {
   return (
     <div className='search-section'>
-      <ImYoutube2 className='search-section__logo' />
+      <ImYoutube2 className='search-section__logo' onClick={() => window.location.reload()} />
       <div className='search-section__input-container'>
         <input
           className='search-section__input-container__input'
@@ -20,7 +20,9 @@ function SearchInput({ searchHandler, query, setQuery, keyDownHandler }) {
           className='search-section__input-container__button'
           onClick={() => searchHandler(query)}
         >
-          <FaSearch />
+          <FaSearch
+            className='search-section__input-container__button--icon'
+          />
         </button>
       </div>
       <FiBell className='search-section__bell' />

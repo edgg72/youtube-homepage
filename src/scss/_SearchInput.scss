@@ -19,6 +19,8 @@ $secondaryGray: #d4d4d4;
     height: 40px;
     margin-left: 20px;
     color: $secondaryGray;
+    cursor: pointer;
+    background-color: $secondaryBlack;
   }
 
   &__input-container {
@@ -44,8 +46,12 @@ $secondaryGray: #d4d4d4;
     &__button {
       width: 70px;
       height: 100%;
-      background-color: $primaryGray;
       border: none;
+      background-color: $primaryGray;
+
+      &--icon {
+        background-color: $primaryGray;
+      }
     }
   }
 
@@ -54,6 +60,7 @@ $secondaryGray: #d4d4d4;
     height: 20px;
     margin-right: 20px;
     color: $secondaryGray;
+    background-color: $secondaryBlack;
   }
 
 

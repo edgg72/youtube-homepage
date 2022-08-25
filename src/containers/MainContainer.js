@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchInput from '../components/SearchInput/SearchInput';
-import TagBar from '../components/TagBar/TagBar';
+import TagBar from './TagBar/TagBar';
 import VideoListContainer from './VideoListContainer';
 import '../css/styles.css'
 import Spinner from '../components/Spinner/Spinner';
@@ -46,15 +46,18 @@ function MainContainer() {
 
   return (
     <main className='main' >
-
       <SearchInput
         searchHandler={fetchVideos}
         query={query}
         setQuery={setQuery}
         keyDownHandler={keyDownHandler}
       />
-      <TagBar />
-      {isLoading ? <Spinner /> : <VideoListContainer videoList={videoList} />}
+      <TagBar onClickTag={fetchVideos} />
+      {isLoading ? (
+        <div className='main__spinner-container'><Spinner /></div>
+      ) : (
+        <VideoListContainer videoList={videoList} />
+      )}
     </main>
   )
 }
