@@ -1,0 +1,24 @@
+$generalBg: #202020;
+$borderGray: #313131;
+$secondaryGray: #7a7979;
+$lightGray: #dedede;
+$secondaryLightGray: #6b6b6b;
+
+.tagbar {
+  background-color: $generalBg;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  border-bottom: $lightGray;
+
+  &__item {
+    padding: 6px;
+    font-size: 0.9rem;
+    background-color: $borderGray;
+    border: 1px solid $secondaryLightGray;
+    color: $lightGray;
+    border-radius: 10px;
+  }
+}

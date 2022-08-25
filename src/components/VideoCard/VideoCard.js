@@ -9,7 +9,7 @@ function VideoCard({ videoData }) {
       href={`https://www.youtube.com/watch?v=${videoData.id.videoId}`}
     >
       <img
-        src={videoData.snippet.thumbnails.default.url}
+        src={videoData.snippet.thumbnails.high.url}
         alt="thumbnail"
         className='video-card__img'
       />

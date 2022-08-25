@@ -1,10 +1,22 @@
+$subtitle: #aaa6a1;
+
 .video-card {
   text-decoration: none;
   color: black; //change to a variable
 }
 
-.video-card__img {}
+.video-card__img {
+  width: 100%;
+}
 
-.video-card__title {}
+.video-card__title {
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-.video-card__channel {}
+.video-card__channel {
+  color: $subtitle;
+  font-size: 0.8rem;
+}

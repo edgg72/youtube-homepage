@@ -1,0 +1,12 @@
+$generalBg: #181818;
+
+.video-list {
+  background-color: $generalBg;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.3fr));
+  gap: 20px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
