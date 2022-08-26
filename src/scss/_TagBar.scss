@@ -12,6 +12,12 @@ $secondaryLightGray: #6b6b6b;
   width: 100%;
   height: 45px;
   border-bottom: $lightGray;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &__item {
     padding: 6px;
@@ -20,6 +26,8 @@ $secondaryLightGray: #6b6b6b;
     border: 1px solid $secondaryLightGray;
     color: $lightGray;
     border-radius: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
     cursor: pointer;
   }
 }
