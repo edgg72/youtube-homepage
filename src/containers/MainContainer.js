@@ -27,7 +27,6 @@ function MainContainer() {
           regionCode: "CO"
         }
       })
-      console.log(res)
       setVideoList(res.data.items)
     }
     setIsLoading(false);

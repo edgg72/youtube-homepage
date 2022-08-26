@@ -7,8 +7,8 @@ import { tags } from '../../utils/tags';
 function TagBar({ onClickTag }) {
   return (
     <div className='tagbar' >
-      {tags.map(tag => {
-        return <Tag tag={tag} onClickTag={onClickTag} />
+      {tags.map((tag, i) => {
+        return <Tag tag={tag} onClickTag={onClickTag} key={i} />
       })}
     </div>
   )
